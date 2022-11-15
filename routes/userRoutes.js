@@ -4,10 +4,22 @@ const user = require('../controllers/userController')
 const validation = require('../validation/users/user_Validation')
 
 
-router.post('/registerUser', user.userSignup)
 
 
 router.post("/register",validation.registerUserValidation,user.userSignup)
 
+router.get("/send",user.sendMail)
 
-module.exports = router;
+router.post('/login',validation.userLoginValidation,user.userLogin)
+router.post("/send-reset-password-email",user.sendUserResetPasswordEmail)
+router.post('/reset-password/:id/:token',user.userPasswordReset)
+
+
+module.exports = router
+
+
+
+
+
+
+  

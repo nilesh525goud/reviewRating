@@ -21,12 +21,17 @@ const companySchema = new mongoose.Schema({
     require: true,
   },
 
-  founded: {
+ //company_logo: {
+  //type: String,
+  //require:true,
+//},
+
+  founded_on: {
     type: String,
     require: true,
   },
   isactive: {
-    type: boolean,
+    type: Boolean,
     default: true,
   },
 });
