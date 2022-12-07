@@ -1,36 +1,30 @@
-const mongoose = require("mongoose");
-const { stringify } = require("nodemon/lib/utils");
-const reviewSchema = new mongoose.Schema({
-  companyId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "company",
-  },
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    require: true,
-    ref: "user",
-  },
+const mongoose=require('mongoose')
+const reviewSchema=new mongoose.Schema({
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'users'
+    },
+    company_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'company'
+    },
+      subject:{
+        type:String,
+        require:true
+      },
+      review:{
+        type:String,
+        require:true
+      },
+      rating:{
+        type:Number,
+        default:0
+      },
+      isActive:{
+        type:Boolean,
+        default:true
+      }
+})
 
-  subject: {
-    type: String,
-    require: true,
-  },
-  review: {
-    type: String,
-    require: true,
-  },
-
-  rating: {
-    type: Number,
-    require: true,
-  },
-
-  isactive: {
-    type: Boolean,
-    default: true,
-  },
-});
-
-reviewSchema.set("timestamps", true);
-
-module.exports = mongoose.model("review", reviewSchema);
+reviewSchema.set('timestamps',true)
+module.exports=mongoose.model('review',reviewSchema)
