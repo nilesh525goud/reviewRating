@@ -1,6 +1,6 @@
 
 @echo off
-set "NODE_VIRTUAL_ENV=C:\Users\ASUS\Workspace\Review_rating\reviewenv"
+set "NODE_VIRTUAL_ENV=C:\WorkSpace\Review _Rating\reviewenv"
 if not defined PROMPT (
     set "PROMPT=$P$G"
 )

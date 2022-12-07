@@ -23,7 +23,7 @@ function global:deactivate ([switch]$NonDestructive) {
 }
 
 deactivate -nondestructive
-$env:NODE_VIRTUAL_ENV="C:\Users\ASUS\Workspace\Review_rating\reviewenv"
+$env:NODE_VIRTUAL_ENV="C:\WorkSpace\Review _Rating\reviewenv"
 
 # Set the prompt to include the env name
 # Make sure _OLD_VIRTUAL_PROMPT is global
